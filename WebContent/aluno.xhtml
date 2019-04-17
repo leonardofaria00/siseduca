@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<h:body>
+	<h1>Novo Aluno</h1>
+	<h:form>
+		<fieldset>
+			<legend>Dados do Aluno</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{alunoBean.aluno.nome}" />
+
+				<h:outputLabel value="CPF:" for="cpf" />
+				<h:inputText id="cpf" value="#{alunoBean.aluno.cpf}" />
+
+				<h:outputLabel value="Telefone:" for="telefone" />
+				<h:inputText id="telefone" value="#{alunoBean.aluno.telefone}" />
+
+				<h:outputLabel value="Endereço:" for="endereco" />
+				<h:inputText id="endereco" value="#{alunoBean.aluno.endereco}" />
+
+				<h:outputLabel value="Matrícula:" for="matricula" />
+				<h:inputText id="matricula" value="#{alunoBean.aluno.matricula}" />
+
+				<h:outputLabel value="Sexo:" for="sexo" />
+				<h:inputText id="sexo" value="#{alunoBean.aluno.sexo}" />
+
+				<h:commandButton value="Gravar" action="#{alunoBean.registra}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+</html>
