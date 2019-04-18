@@ -3,38 +3,76 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
-</head>
-<h:body>
-	<h1>Novo Aluno</h1>
-	<h:form>
-		<fieldset>
-			<legend>Dados do Aluno</legend>
-			<h:panelGrid columns="2">
-				<h:outputLabel value="Nome:" for="nome" />
-				<h:inputText id="nome" value="#{alunoBean.aluno.nome}" />
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-				<h:outputLabel value="CPF:" for="cpf" />
-				<h:inputText id="cpf" value="#{alunoBean.aluno.cpf}" />
+<ui:composition template="_template.xhtml">
 
-				<h:outputLabel value="Telefone:" for="telefone" />
-				<h:inputText id="telefone" value="#{alunoBean.aluno.telefone}" />
+	<ui:define name="titulo">
+				Novo Aluno
+		</ui:define>
 
-				<h:outputLabel value="Endereço:" for="endereco" />
-				<h:inputText id="endereco" value="#{alunoBean.aluno.endereco}" />
+	<ui:define name="conteudo">
+		<h:form>
+			<fieldset>
+				<legend>Dados do Aluno</legend>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Nome:" for="nome" />
+					<h:inputText id="nome" value="#{alunoBean.aluno.nome}" />
 
-				<h:outputLabel value="Matrícula:" for="matricula" />
-				<h:inputText id="matricula" value="#{alunoBean.aluno.matricula}" />
+					<h:outputLabel value="CPF:" for="cpf" />
+					<h:inputText id="cpf" value="#{alunoBean.aluno.cpf}" />
 
-				<h:outputLabel value="Sexo:" for="sexo" />
-				<h:inputText id="sexo" value="#{alunoBean.aluno.sexo}" />
+					<h:outputLabel value="Telefone:" for="telefone" />
+					<h:inputText id="telefone" value="#{alunoBean.aluno.telefone}" />
 
-				<h:commandButton value="Gravar" action="#{alunoBean.registra}" />
-			</h:panelGrid>
-		</fieldset>
-	</h:form>
-</h:body>
+					<h:outputLabel value="Endereço:" for="endereco" />
+					<h:inputText id="endereco" value="#{alunoBean.aluno.endereco}" />
+
+					<h:outputLabel value="Matrícula:" for="matricula" />
+					<h:inputText id="matricula" value="#{alunoBean.aluno.matricula}" />
+
+					<h:outputLabel value="Sexo:" for="sexo" />
+					<h:inputText id="sexo" value="#{alunoBean.aluno.sexo}" />
+
+					<h:commandButton value="Gravar" action="#{alunoBean.registra}" />
+				</h:panelGrid>
+			</fieldset>
+		</h:form>
+
+		<h:dataTable value="#{alunoBean.alunos}" var="aluno" id="tabelaAlunos">
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				<h:outputText value="#{aluno.nome}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">CPF</f:facet>
+				<h:outputText value="#{aluno.cpf}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Telefone</f:facet>
+				<h:outputText value="#{aluno.telefone}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Endereço</f:facet>
+				<h:outputText value="#{aluno.endereco}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Matrícula</f:facet>
+				<h:outputText value="#{aluno.matricula}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Sexo</f:facet>
+				<h:outputText value="#{aluno.sexo}" />
+			</h:column>
+			<h:column headerText="Alterar">
+				<h:commandLink value="altera" action="#{alunoBean.carregar(aluno)}" />
+			</h:column>
+
+			<h:column headerText="Remover">
+				<h:commandLink value="remove" action="#{alunoBean.remover(aluno)}" />
+			</h:column>
+		</h:dataTable>
+
+	</ui:define>
+</ui:composition>
 </html>

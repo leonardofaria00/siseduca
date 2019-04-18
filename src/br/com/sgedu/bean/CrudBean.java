@@ -9,6 +9,6 @@ public interface CrudBean {
 
 //	public abstract void excluir();
 
-//	public abstract void getUsuario();
+	public abstract Object getObjeto();
 
 }
