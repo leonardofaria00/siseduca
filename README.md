@@ -9,6 +9,7 @@ $ sudo git clone https://github.com/leonardofaria00/sgedu.git
 
 # Rotas
 http://localhost:8080/sgedu/
+
 http://localhost:8080/sgedu/alunos
 
 # Principais funcionalidades
