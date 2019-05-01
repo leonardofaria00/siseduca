@@ -5,6 +5,7 @@ Se tem interesse em contribuir para a SGEDU, confira o guia de contribuições.
 
 # Instalação
 Primeiro passo para a instalação do projeto é baixar o repositório com o seguinte comando:
+
 $ sudo git clone https://github.com/leonardofaria00/sgedu.git
 
 # Rotas
