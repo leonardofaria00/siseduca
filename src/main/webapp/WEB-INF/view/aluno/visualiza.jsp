@@ -18,18 +18,19 @@
 <title>Gerenciamento Educacional!</title>
 </head>
 <body class="container">
-	<h1>Formulário de Alunos!</h1>
+	<h1>Alteração de Aluno!</h1>
 
 	<form action="/sgedu/alunos/add" method="post">
 	  <div class="form-row">	
 		<div class="col">
-			<label for="forNome">Nome:</label> 
-			<input type="text" class="form-control" id="forNome" placeholder="Enter name" name="nome" required="true"> 
+			<label for="forNome">Nome:</label>
+			<input type="hidden" name="id" value="${aluno.id}"> 
+			<input type="text" class="form-control" id="forNome" placeholder="Enter name" name="nome" required="true" value="${aluno.nome}"> 
 			<small id="forNome" class="form-text text-muted">We'll never share your name with anyone else.</small>
 		</div>
 	  <div class="col">
 			<label for="forCPF">CPF:</label> 
-			<input type="text" class="form-control" id="forCPF" placeholder="000.000.000-00" name="cpf"> 
+			<input type="text" class="form-control" id="forCPF" placeholder="Enter CPF" name="cpf" value="${aluno.cpf}"> 
 			<small id="forCPF" class="form-text text-muted">We'll never share your CPF with anyone else.</small>
 		</div>
 	  </div>
@@ -37,58 +38,55 @@
 	   <div class="form-row">	
 		<div class="col">
 			<label for="forEmail">Email:</label> 
-			<input type="email" class="form-control" id="forEmail" placeholder="Enter Email" name="email"> 
+			<input type="email" class="form-control" id="forEmail" placeholder="Enter Email" name="email" value="${aluno.email}"> 
 		</div>
 	  <div class="col">
 			<label for="forDataNascimento">Data de Nascimento:</label> 
-			<input type="date" class="form-control" id="forDataNascimento" placeholder="Enter birthday" name="dataNascimento"> 
+			<input type="date" class="form-control" id="forDataNascimento" placeholder="Enter birthday" name="dataNascimento" value="${aluno.dataNascimento}"> 
 		</div>
 	  </div>
 	  <br>
 	    <div class="form-row">	
 		<div class="col">
 			<label for="forTelefone">Telefone:</label> 
-			<input type="text" class="form-control" id="forTelefone" placeholder="(00) 00000-0000" name="telefone"> 
+			<input type="text" class="form-control" id="forTelefone" placeholder="Enter Phone" name="telefone" value="${aluno.telefone}"> 
 		</div>
 	  <div class="col">
 			<label for="forEndereco">Endereço:</label> 
-			<input type="text" class="form-control" id="forEndereco" placeholder="Enter Address" name="endereco"> 
+			<input type="text" class="form-control" id="forEndereco" placeholder="Enter Address" name="endereco" value="${aluno.endereco}"> 
 		</div>
 	  </div>
 	  <br>
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forMatricula">Matrícula:</label> 
-			<input type="number" class="form-control" id="forMatricula" placeholder="Enter Matrícula" name="matricula"> 
+			<input type="number" class="form-control" id="forMatricula" placeholder="Enter Matrícula" name="matricula" value="${aluno.matricula}"> 
 		</div>
 	  <div class="col">
 			<label for="forTurma">Turma:</label> 
-			 <select class="form-control" name="turma" required="true">
-			  <option value="">.::Selecione::.</option>
-			  <option value="TURMA1SEMESTRE">1º SEMESTRE</option>
-		      <option value="TURMA2SEMESTRE">2º SEMESTRE</option>
-		    </select>
-<!-- 			<input type="text" class="form-control" id="forTurma" placeholder="Enter Turma" name="turma">  -->
+			<input type="text" class="form-control" id="forTurma" placeholder="Enter Turma" name="turma" value="${aluno.turma}"> 
 		</div>
 	  </div>
 	    <br>
 	  <div class="form-row">	
 		<div class="col-sm-6 col-lg-6 col-xm-6">
 			<label for="forMateria">Matéria:</label> 
-			<select class="form-control" name="materia" required="true">
-			  <option value="">.::Selecione::.</option>
-			  <option value="ECONOMIA">ECONOMIA</option>
-		      <option value="GESTAODEPESSOAS">GESTAO DE PESSOAS</option>
-		      <option value="EMPREENDEDORISMO">EMPREENDEDORISMO</option>
-		      <option value="LEITURAPRODUCAODETEXTO">LEITURA E PRODUCAO DE TEXTO</option>
-		      <option value="SOCIOLOGIA">SOCIOLOGIA</option>		      
-		    </select>
-<!-- 			<input type="text" class="form-control" id="forMateria" placeholder="Enter Matéria" name="materia">  -->
+			<input type="text" class="form-control" id="forMateria" placeholder="Enter Matéria" name="materia" value="${aluno.materia}"> 
 		</div>
+				<div class="form-group">
+		    <label for="exampleFormControlSelect1">Example select</label>
+		    <select class="form-control" id="exampleFormControlSelect1">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>
 	  </div>
 	  <br>
-		<button type="submit" class="btn btn-primary">Submit</button>
-		<button type="reset" class="btn btn-secondary">Limpar</button>
+		<button type="submit" class="btn btn-success">Salvar</button>
+		<a class="btn btn-secondary" href="/sgedu/alunos/">Voltar</a>		
 	</form>
 
 	<!-- Optional JavaScript -->

@@ -18,8 +18,13 @@
 <title>Gerenciamento Educacional!</title>
 </head>
 <body class="container">
-	<h1>Aluno salvo com sucesso!</h1>
-
+	<div class="alert alert-success" role="alert">	
+	Aluno salvo com sucesso!
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+   			 <span aria-hidden="true">&times;</span>
+  		</button>
+  	</div>
+<a class="btn btn-secondary" href="http://localhost:8080/sgedu/alunos/">Voltar</a>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

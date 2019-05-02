@@ -1,5 +1,7 @@
 package br.com.sgedu.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,15 @@ public class AlunoController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView index() {
+		System.out.println("Chamando lista Aluno");
+		List<Aluno> alunos = dao.getAlunos();
+		ModelAndView view = new ModelAndView("aluno/lista");
+		view.addObject("alunos", alunos);
+		return view;
+	}
+
+	@RequestMapping("/form")
+	public ModelAndView form() {
 		System.out.println("Chamando form Aluno");
 		ModelAndView view = new ModelAndView("aluno/form");
 		return view;
@@ -25,10 +36,17 @@ public class AlunoController {
 
 	@RequestMapping("/add")
 	public ModelAndView salvar(Aluno aluno) {
-		System.out.println("Entrou no salvar " + aluno);
 		dao.salvar(aluno);
 		ModelAndView view = new ModelAndView("aluno/sucesso");
 		return view;
 	}
 
+	@RequestMapping("/lista/{id}")
+	public ModelAndView visualiza(Aluno id) {
+		Aluno aluno = dao.getAlunoPorId(id);
+		System.out.println(aluno);
+		ModelAndView view = new ModelAndView("aluno/visualiza");
+		view.addObject("aluno", aluno);
+		return view;
+	}
 }

@@ -22,14 +22,16 @@ public class JPAConfiguration {
 		bean.setJpaVendorAdapter(vendor);
 
 		DriverManagerDataSource source = new DriverManagerDataSource();
-		source.setUsername("root");
-		source.setPassword("");
-		source.setUrl("jdbc:mysql://localhost:3306/sgedu");
-		source.setDriverClassName("com.mysql.jdbc.Driver");
+		source.setUsername("postgres");
+		source.setPassword("123456");
+		source.setUrl("jdbc:postgresql://localhost:5432/sgedu");
+		source.setDriverClassName("org.postgresql.Driver");
+//		source.setUrl("jdbc:mysql://localhost:3306/sgedu");
+//		source.setDriverClassName("com.mysql.jdbc.Driver");
 		bean.setDataSource(source);
-
 		Properties props = new Properties();
-		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+		props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+//		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		props.setProperty("hibernate.show_sql", "true");
 		props.setProperty("hibernate.hbm2ddl.auto", "update");
 		bean.setJpaProperties(props);

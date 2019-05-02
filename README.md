@@ -13,6 +13,8 @@ http://localhost:8080/sgedu/
 
 http://localhost:8080/sgedu/alunos
 
+http://localhost:8080/sgedu/alunos/form
+
 # Principais funcionalidades
 Manter aluno, professor.
 Gerenciar Turma.
