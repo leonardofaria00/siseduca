@@ -16,16 +16,16 @@ http://localhost:8080/sgedu/alunos
 http://localhost:8080/sgedu/alunos/form
 
 # Principais funcionalidades
-Avaliações
-Notas
-Frequências
-Tarefas
-Agenda
-Ocorrência
+Avaliações, 
+Notas, 
+Frequências, 
+Tarefas, 
+Agenda, 
+Ocorrência, 
 Manter aluno, professor.
-Gerenciar Turma.
-Gerenciar Matéria.
-Gerenciar grade horária.
+Gerenciar Turma, 
+Gerenciar Matéria, 
+Gerenciar grade horária, 
 Consultar Nota.
 
 # Como contribuir
