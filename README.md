@@ -1,19 +1,19 @@
-# SGEDU - Sistema de Gerenciamento Educacional
-SGEDU é um software livre de gerenciamento e controle para instituições de ensino. O sistema foi inicialmente desenvolvido por Leonardo Faria e Igor Moreis como projeto de Portifólios e Projetos de Software.
+# SISEDUCA - Sistema de Gerenciamento Educacional
+SGEDU é um software livre de gerenciamento e controle para instituições de ensino. O sistema foi inicialmente desenvolvido por Leonardo Faria, Igor Moreis e Pedro Miranda como projeto de Portifólios e Projetos de Software.
 
-Se tem interesse em contribuir para a SGEDU, confira o guia de contribuições.
+Se tem interesse em contribuir para este projeto, confira o guia de contribuições.
 
 # Instalação
 Primeiro passo para a instalação do projeto é baixar o repositório com o seguinte comando:
 
-$ sudo git clone https://github.com/leonardofaria00/sgedu.git
+$ sudo git clone https://github.com/leonardofaria00/siseduca.git
 
 # Rotas
-http://localhost:8080/sgedu/
+http://localhost:8080/siseduca/
 
-http://localhost:8080/sgedu/alunos
+http://localhost:8080/siseduca/alunos
 
-http://localhost:8080/sgedu/alunos/form
+http://localhost:8080/siseduca/alunos/form
 
 # Principais funcionalidades
 Avaliações, 
