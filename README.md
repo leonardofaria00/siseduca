@@ -15,18 +15,30 @@ http://localhost:8080/siseduca/alunos
 
 http://localhost:8080/siseduca/alunos/form
 
-# Principais funcionalidades
+# Principais funcionalidades que o sistema pode fazer?
 Avaliações, 
 Notas, 
 Frequências, 
 Tarefas, 
 Agenda, 
 Ocorrência, 
+Emissão de boletos bancários,
+Emissão de boletins,
+Controle de matrícula,
+Controle de inadimplência,
+Lançamento de notas,
+Controle de frequência dos alunos,
 Manter aluno, professor.
 Gerenciar Turma, 
 Gerenciar Matéria, 
 Gerenciar grade horária, 
 Consultar Nota.
+
+# Benefícios de uma ferramenta de gestão escolar
+Ajuda a captar mais alunos.
+Reduz as taxas de inadimplência.
+Integra as atividades dos gestores, secretaria e professores.
+Organiza o caixa e o ajuda no controle financeiro.
 
 # Como contribuir
 Os contribuintes podem colaborar para manter e evoluir o sistema através da correção de bugs e implementação de novas funcionalidades. Para contribuir o projeto deve ser clonado do repositório oficial.
