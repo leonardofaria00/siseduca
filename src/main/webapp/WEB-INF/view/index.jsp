@@ -18,7 +18,11 @@
 <title>Gerenciamento Educacional!</title>
 </head>
 <body class="container">
-	<h1>Hello, world!</h1>
+	<div style="position: absolute; top: 50%; left: 50%">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
