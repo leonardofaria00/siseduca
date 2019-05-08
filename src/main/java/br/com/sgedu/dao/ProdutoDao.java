@@ -37,8 +37,9 @@ public class ProdutoDao {
 
 	public void remover(Aluno aluno) {
 		Aluno alunoPorId = getAlunoPorId(aluno);
-		System.out.println("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
-		manager.createQuery("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
+		manager.remove(alunoPorId);
+//		System.out.println("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
+//		manager.createQuery("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
 	}
 
 }
