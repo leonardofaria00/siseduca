@@ -19,7 +19,7 @@
 </head>
 <body class="container">
 	<div class="alert alert-success" role="alert">	
-	Aluno salvo com sucesso!
+	Operação realizada com sucesso!
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
    			 <span aria-hidden="true">&times;</span>
   		</button>

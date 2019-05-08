@@ -27,12 +27,18 @@ public class ProdutoDao {
 	}
 
 	public List<Aluno> getAlunos() {
-		return manager.createQuery("select p from Aluno p", Aluno.class).getResultList();
+		return manager.createQuery("select p from Aluno p where status=1", Aluno.class).getResultList();
 	}
 
 	public Aluno getAlunoPorId(Aluno aluno) {
 		System.out.println("Buscando aluno Id: " + aluno.getId());
 		return manager.find(Aluno.class, aluno.getId());
+	}
+
+	public void remover(Aluno aluno) {
+		Aluno alunoPorId = getAlunoPorId(aluno);
+		System.out.println("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
+		manager.createQuery("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
 	}
 
 }

@@ -20,6 +20,7 @@ public class Pessoa {
 	private String endereco;
 	private String telefone;
 	private Calendar dataCadastro = Calendar.getInstance();
+	private int status = 1;
 
 	public Integer getId() {
 		return id;
@@ -83,6 +84,14 @@ public class Pessoa {
 
 	public void setDataCadastro(Calendar dataCadastro) {
 		this.dataCadastro = dataCadastro;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 }

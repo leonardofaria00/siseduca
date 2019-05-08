@@ -49,4 +49,13 @@ public class AlunoController {
 		view.addObject("aluno", aluno);
 		return view;
 	}
+
+	@RequestMapping("/delete/{id}")
+	public ModelAndView removeAluno(Aluno aluno) {
+		dao.remover(aluno);
+
+		ModelAndView view = new ModelAndView("aluno/sucesso");
+		return view;
+	}
+
 }

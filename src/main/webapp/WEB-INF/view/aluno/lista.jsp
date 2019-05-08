@@ -41,7 +41,7 @@
 					<td>${p.telefone}</td>
 					<td>
 					<a href="/sgedu/alunos/lista/${p.id}"><i class="fas fa-pen"></i></a>
-					<a href="/deleta/${p.id}"><i class="fas fa-trash-alt"></i></a>
+					<a href="/sgedu/alunos/delete/${p.id}"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 			</c:forEach>
