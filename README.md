@@ -6,7 +6,7 @@ Se tem interesse em contribuir para este projeto, confira o guia de contribuiç�
 # Instalação
 Primeiro passo para a instalação do projeto é baixar o repositório com o seguinte comando:
 
-$ sudo git clone https://github.com/leonardofaria00/siseduca.git
+$ sudo git clone -b develop https://github.com/leonardofaria00/siseduca.git
 
 # Rotas
 http://localhost:8080/siseduca/
