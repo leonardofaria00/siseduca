@@ -20,7 +20,7 @@
 <body class="container">
 	<h1>Formulário de Alunos!</h1>
 
-	<form action="/sgedu/alunos/add" method="post">
+	<form action="/siseduca/alunos/add" method="post">
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forNome">Nome:</label> 
@@ -59,7 +59,7 @@
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forMatricula">Matrícula:</label> 
-			<input type="number" class="form-control" id="forMatricula" placeholder="Enter Matrícula" name="matricula"> 
+			<input type="text" class="form-control" id="forMatricula" placeholder="Enter Matrícula" name="matricula"> 
 		</div>
 	  <div class="col">
 			<label for="forTurma">Turma:</label> 

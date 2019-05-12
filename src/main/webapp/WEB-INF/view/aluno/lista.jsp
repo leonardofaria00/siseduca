@@ -24,12 +24,19 @@
 <body class="container">
 	<h1>Lista de Alunos</h1>
 	<hr>
+		<div class="alert alert-success" role="alert">
+			${sucesso}
+		</div>
 	<table class="table">
 		<thead class="thead-dark">
 			<tr class="text-center">
 				<th scope="col">Código</th>
 				<th scope="col">Nome</th>
+<!-- 				<th scope="col">CPF</th> -->
+				<th scope="col">Matrícula</th>				
+				<th scope="col">Email</th>								
 				<th scope="col">Telefone</th>
+				<th scope="col">Endereço</th>
 				<th scope="col">Ações</th>
 			</tr>
 		</thead>
@@ -38,10 +45,14 @@
 				<tr class="text-center">
 					<th scope="row">${p.id}</th>
 					<td>${p.nome}</td>
+<%-- 					<td>${p.cpf}</td> --%>
+					<td>${p.matricula}</td>
+					<td>${p.email}</td>
 					<td>${p.telefone}</td>
+					<td>${p.endereco}</td>
 					<td>
-					<a href="/sgedu/alunos/lista/${p.id}"><i class="fas fa-pen"></i></a>
-					<a href="/sgedu/alunos/delete/${p.id}"><i class="fas fa-trash-alt"></i></a>
+					<a href="/siseduca/alunos/lista/${p.id}"><i class="fas fa-pen"></i></a>
+					<a href="/siseduca/alunos/delete/${p.id}"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -20,7 +20,7 @@
 <body class="container">
 	<h1>Alteração de Aluno!</h1>
 
-	<form action="/sgedu/alunos/add" method="post">
+	<form action="/siseduca/alunos/add" method="post">
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forNome">Nome:</label>
@@ -30,7 +30,7 @@
 		</div>
 	  <div class="col">
 			<label for="forCPF">CPF:</label> 
-			<input type="text" class="form-control" id="forCPF" placeholder="Enter CPF" name="cpf" value="${aluno.cpf}"> 
+			<input type="text" class="form-control" id="forCPF" placeholder="Enter CPF" name="cpf" value="${aluno.cpf}" disabled="true"> 
 			<small id="forCPF" class="form-text text-muted">We'll never share your CPF with anyone else.</small>
 		</div>
 	  </div>
@@ -86,7 +86,7 @@
 	  </div>
 	  <br>
 		<button type="submit" class="btn btn-success">Salvar</button>
-		<a class="btn btn-secondary" href="/sgedu/alunos/">Voltar</a>		
+		<a class="btn btn-secondary" href="/siseduca/alunos/">Voltar</a>		
 	</form>
 
 	<!-- Optional JavaScript -->

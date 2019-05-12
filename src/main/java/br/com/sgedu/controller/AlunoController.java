@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.sgedu.dao.ProdutoDao;
 import br.com.sgedu.model.Aluno;
@@ -35,10 +36,13 @@ public class AlunoController {
 	}
 
 	@RequestMapping("/add")
-	public ModelAndView salvar(Aluno aluno) {
+	public ModelAndView salvar(Aluno aluno, RedirectAttributes redirectAttributes) {
 		dao.salvar(aluno);
-		ModelAndView view = new ModelAndView("aluno/sucesso");
-		return view;
+		redirectAttributes.addFlashAttribute("sucesso", "Aluno cadastrado com sucesso!");
+//		ModelAndView view = new ModelAndView("aluno/sucesso");
+//		return view;
+		return new ModelAndView("redirect:/alunos");
+
 	}
 
 	@RequestMapping("/lista/{id}")
@@ -53,7 +57,6 @@ public class AlunoController {
 	@RequestMapping("/delete/{id}")
 	public ModelAndView removeAluno(Aluno aluno) {
 		dao.remover(aluno);
-
 		ModelAndView view = new ModelAndView("aluno/sucesso");
 		return view;
 	}
