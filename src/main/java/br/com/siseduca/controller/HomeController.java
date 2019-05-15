@@ -1,4 +1,4 @@
-package br.com.sgedu.controller;
+package br.com.siseduca.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

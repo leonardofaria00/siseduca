@@ -1,4 +1,4 @@
-package br.com.sgedu.controller;
+package br.com.siseduca.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import br.com.sgedu.dao.ProdutoDao;
-import br.com.sgedu.model.Aluno;
+import br.com.siseduca.dao.ProdutoDao;
+import br.com.siseduca.model.Aluno;
 
 @Controller
 @RequestMapping("/alunos")
@@ -37,12 +37,12 @@ public class AlunoController {
 
 	@RequestMapping("/add")
 	public ModelAndView salvar(Aluno aluno, RedirectAttributes redirectAttributes) {
+//		if (aluno.getNome() == null || aluno.getNome() == "")
+//			return new ModelAndView("redirect:/alunos/form");
+
 		dao.salvar(aluno);
 		redirectAttributes.addFlashAttribute("sucesso", "Aluno cadastrado com sucesso!");
-//		ModelAndView view = new ModelAndView("aluno/sucesso");
-//		return view;
 		return new ModelAndView("redirect:/alunos");
-
 	}
 
 	@RequestMapping("/lista/{id}")

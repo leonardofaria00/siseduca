@@ -1,4 +1,4 @@
-package br.com.sgedu.model;
+package br.com.siseduca.model;
 
 import java.util.Calendar;
 

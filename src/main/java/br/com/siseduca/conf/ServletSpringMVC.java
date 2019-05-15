@@ -1,4 +1,4 @@
-package br.com.sgedu.conf;
+package br.com.siseduca.conf;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

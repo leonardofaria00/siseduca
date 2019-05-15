@@ -1,4 +1,4 @@
-package br.com.sgedu.model;
+package br.com.siseduca.model;
 
 import java.io.Serializable;
 
@@ -10,8 +10,7 @@ public class Aluno extends Pessoa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String matricula;
-	private Turma turma;
-	private Materia materia;
+	private Turma2 turma;
 
 	public String getMatricula() {
 		return matricula;
@@ -21,21 +20,15 @@ public class Aluno extends Pessoa implements Serializable {
 		this.matricula = matricula;
 	}
 
-	public Turma getTurma() {
+	public Turma2 getTurma() {
 		return turma;
 	}
 
-	public void setTurma(Turma turma) {
+	public void setTurma(Turma2 turma) {
 		this.turma = turma;
 	}
 
-	public Materia getMateria() {
-		return materia;
-	}
 
-	public void setMateria(Materia materia) {
-		this.materia = materia;
-	}
 
 	public void consultarNota() {
 		System.out.println("Consultando nota...");
@@ -43,7 +36,7 @@ public class Aluno extends Pessoa implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Aluno [matricula=" + matricula + ", turma=" + turma + ", materia=" + materia + ", getId()=" + getId()
+		return "Aluno [matricula=" + matricula + ", turma=" + turma + ", getId()=" + getId()
 				+ ", getNome()=" + getNome() + ", getEmail()=" + getEmail() + ", getCpf()=" + getCpf()
 				+ ", getDataNascimento()=" + getDataNascimento() + ", getEndereco()=" + getEndereco()
 				+ ", getTelefone()=" + getTelefone() + ", getDataCadastro()=" + getDataCadastro().getTime()

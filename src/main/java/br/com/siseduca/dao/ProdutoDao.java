@@ -1,4 +1,4 @@
-package br.com.sgedu.dao;
+package br.com.siseduca.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.sgedu.model.Aluno;
+import br.com.siseduca.model.Aluno;
 
 @Repository
 @Transactional

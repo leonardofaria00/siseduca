@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +18,14 @@
 <title>Gerenciamento Educacional!</title>
 </head>
 <body class="container">
-	<div style="position: absolute; top: 50%; left: 50%">
-            <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
+	<form action="" method="post">
+		<div class="row">
+			<div class="col">
+				<label for="nome">Nome da Matéria</label> 
+				<input type="text" class="form-control" name="nome" id="nome" placeholder="First name">
+			</div>
+		</div>
+	</form>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

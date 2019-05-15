@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +22,13 @@
 <body class="container">
 	<h1>Formulário de Alunos!</h1>
 
-	<form action="/siseduca/alunos/add" method="post">
+	<form:form action="${s:mvcUrl('AC#salvar').build()}" method="post" commandName="aluno">
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forNome">Nome:</label> 
-			<input type="text" class="form-control" id="forNome" placeholder="Enter name" name="nome" required="true"> 
+			<input type="text" class="form-control" id="forNome" placeholder="Enter name" name="nome"> 
 			<small id="forNome" class="form-text text-muted">We'll never share your name with anyone else.</small>
+			<form:errors path="nome"/>
 		</div>
 	  <div class="col">
 			<label for="forCPF">CPF:</label> 
@@ -63,7 +66,7 @@
 		</div>
 	  <div class="col">
 			<label for="forTurma">Turma:</label> 
-			 <select class="form-control" name="turma" required="true">
+			 <select class="form-control" name="turma">
 			  <option value="">.::Selecione::.</option>
 			  <option value="TURMA1SEMESTRE">1º SEMESTRE</option>
 		      <option value="TURMA2SEMESTRE">2º SEMESTRE</option>
@@ -75,7 +78,7 @@
 	  <div class="form-row">	
 		<div class="col-sm-6 col-lg-6 col-xm-6">
 			<label for="forMateria">Matéria:</label> 
-			<select class="form-control" name="materia" required="true">
+			<select class="form-control" name="materia">
 			  <option value="">.::Selecione::.</option>
 			  <option value="ECONOMIA">ECONOMIA</option>
 		      <option value="GESTAODEPESSOAS">GESTAO DE PESSOAS</option>
@@ -89,7 +92,7 @@
 	  <br>
 		<button type="submit" class="btn btn-primary">Submit</button>
 		<button type="reset" class="btn btn-secondary">Limpar</button>
-	</form>
+	</form:form>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

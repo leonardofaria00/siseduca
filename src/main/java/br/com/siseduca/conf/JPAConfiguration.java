@@ -1,4 +1,4 @@
-package br.com.sgedu.conf;
+package br.com.siseduca.conf;
 
 import java.util.Properties;
 
@@ -36,7 +36,7 @@ public class JPAConfiguration {
 		props.setProperty("hibernate.hbm2ddl.auto", "update");
 		bean.setJpaProperties(props);
 
-		bean.setPackagesToScan("br.com.sgedu.model");
+		bean.setPackagesToScan("br.com.siseduca.model");
 		return bean;
 	}
 
