@@ -3,6 +3,8 @@ package br.com.siseduca.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +22,7 @@ public class AlunoController {
 	private ProdutoDao dao;
 
 	@RequestMapping(method = RequestMethod.GET)
+	@Cacheable(value = "alunoHome")
 	public ModelAndView index() {
 		System.out.println("Chamando lista Aluno");
 		List<Aluno> alunos = dao.getAlunos();
@@ -36,6 +39,7 @@ public class AlunoController {
 	}
 
 	@RequestMapping("/add")
+	@CacheEvict(value = "alunoHome", allEntries = true)
 	public ModelAndView salvar(Aluno aluno, RedirectAttributes redirectAttributes) {
 //		if (aluno.getNome() == null || aluno.getNome() == "")
 //			return new ModelAndView("redirect:/alunos/form");

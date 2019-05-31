@@ -25,8 +25,8 @@ public class JPAConfiguration {
 		source.setUsername("postgres");
 		source.setPassword("123456");
 		source.setUrl("jdbc:postgresql://localhost:5432/sgedu");
-		source.setDriverClassName("org.postgresql.Driver");
 //		source.setUrl("jdbc:mysql://localhost:3306/sgedu");
+		source.setDriverClassName("org.postgresql.Driver");
 //		source.setDriverClassName("com.mysql.jdbc.Driver");
 		bean.setDataSource(source);
 		Properties props = new Properties();

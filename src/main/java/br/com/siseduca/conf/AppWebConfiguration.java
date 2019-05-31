@@ -1,5 +1,8 @@
 package br.com.siseduca.conf;
 
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import br.com.siseduca.controller.HomeController;
 import br.com.siseduca.dao.ProdutoDao;
 
+@EnableCaching
 @EnableWebMvc
 @ComponentScan(basePackageClasses = { HomeController.class, ProdutoDao.class })
 public class AppWebConfiguration {
@@ -29,5 +33,10 @@ public class AppWebConfiguration {
 		messageSource.setDefaultEncoding("UTF-8");
 		messageSource.setCacheSeconds(1);
 		return messageSource;
+	}
+
+	@Bean
+	public CacheManager cacheManager() {
+		return new ConcurrentMapCacheManager();
 	}
 }
