@@ -51,6 +51,7 @@
 					<td>${p.telefone}</td>
 					<td>${p.endereco}</td>
 					<td>
+					<a href="/siseduca/alunos/detalhes/${p.id}"><i class="fas fa-search"></i></a>
 					<a href="/siseduca/alunos/lista/${p.id}"><i class="fas fa-pen"></i></a>
 					<a href="/siseduca/alunos/delete/${p.id}"><i class="fas fa-trash-alt"></i></a>
 					</td>
