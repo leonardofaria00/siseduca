@@ -41,7 +41,7 @@ public class AppWebConfiguration {
 		ContentNegotiatingViewResolver resolver = new ContentNegotiatingViewResolver();
 		resolver.setViewResolvers(viewResolvers);
 		resolver.setContentNegotiationManager(manager);
-		
+
 		return resolver;
 
 	}
