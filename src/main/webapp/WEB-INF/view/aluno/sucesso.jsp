@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@
    			 <span aria-hidden="true">&times;</span>
   		</button>
   	</div>
-<a class="btn btn-secondary" href="http://localhost:8080/sgedu/alunos/">Voltar</a>
+<a class="btn btn-secondary" href="${s:mvcUrl('AC#index').biuld()}">Voltar</a>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

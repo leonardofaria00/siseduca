@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -7,14 +8,17 @@
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <c:url value="/resources/css" var="cssPath" />
 <link rel="stylesheet" href="${cssPath}/bootstrap.min.css">
 <style type="text/css">
 body {
-	padding: 20px; 0px;
+	padding: 20px;
+	0
+	px;
 }
 </style>
 <title>Gerenciamento Educacional!</title>
@@ -93,38 +97,14 @@ body {
 		</div>
 		<br>
 		<div class="form-row">
-			<div class="col">
+			<div class="col-6">
 				<label for="forMatricula">Matrícula:</label> <input type="text"
 					class="form-control" id="forMatricula"
 					placeholder="Enter Matrícula" name="matricula">
 			</div>
-			<div class="col">
-				<label for="forTurma">Turma:</label> <select class="form-control"
-					name="turma">
-					<option value="">.::Selecione::.</option>
-					<option value="TURMA1SEMESTRE">1º SEMESTRE</option>
-					<option value="TURMA2SEMESTRE">2º SEMESTRE</option>
-				</select>
-				<!-- 			<input type="text" class="form-control" id="forTurma" placeholder="Enter Turma" name="turma">  -->
-			</div>
 		</div>
 		<br>
-		<div class="form-row">
-			<div class="col-sm-6 col-lg-6 col-xm-6">
-				<label for="forMateria">Matéria:</label> <select
-					class="form-control" name="materia">
-					<option value="">.::Selecione::.</option>
-					<option value="ECONOMIA">ECONOMIA</option>
-					<option value="GESTAODEPESSOAS">GESTAO DE PESSOAS</option>
-					<option value="EMPREENDEDORISMO">EMPREENDEDORISMO</option>
-					<option value="LEITURAPRODUCAODETEXTO">LEITURA E PRODUCAO
-						DE TEXTO</option>
-					<option value="SOCIOLOGIA">SOCIOLOGIA</option>
-				</select>
-				<!-- 			<input type="text" class="form-control" id="forMateria" placeholder="Enter Matéria" name="materia">  -->
-			</div>
-		</div>
-		<br>
+
 		<button type="submit" class="btn btn-primary">Submit</button>
 		<button type="reset" class="btn btn-secondary">Limpar</button>
 	</form:form>

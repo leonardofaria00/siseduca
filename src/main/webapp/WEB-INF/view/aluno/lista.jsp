@@ -60,7 +60,6 @@ body {
 				<th scope="col">#</th>
 				<th scope="col">Código</th>
 				<th scope="col">Nome</th>
-<!-- 				<th scope="col">CPF</th> -->
 				<th scope="col">Matrícula</th>				
 				<th scope="col">Email</th>								
 				<th scope="col">Telefone</th>
@@ -72,9 +71,8 @@ body {
 			<c:forEach items="${alunos}" var="p">
 				<tr class="text-center">
 					<th scope="row">#</th>
-					<th scope="row">${p.id}</th>
+					<td>${p.id}</td>
 					<td>${p.nome}</td>
-<%-- 					<td>${p.cpf}</td> --%>
 					<td>${p.matricula}</td>
 					<td>${p.email}</td>
 					<td>${p.telefone}</td>

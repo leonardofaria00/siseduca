@@ -25,7 +25,6 @@ public class AlunoController {
 	@RequestMapping(method = RequestMethod.GET)
 	@Cacheable(value = "alunoHome")
 	public ModelAndView index() {
-		System.out.println("Chamando lista Aluno");
 		List<Aluno> alunos = dao.getAlunos();
 		ModelAndView view = new ModelAndView("aluno/lista");
 		view.addObject("alunos", alunos);
@@ -34,7 +33,6 @@ public class AlunoController {
 
 	@RequestMapping("/form")
 	public ModelAndView form() {
-		System.out.println("Chamando form Aluno");
 		ModelAndView view = new ModelAndView("aluno/form");
 		return view;
 	}
