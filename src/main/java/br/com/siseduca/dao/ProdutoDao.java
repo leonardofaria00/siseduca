@@ -18,12 +18,10 @@ public class ProdutoDao {
 	private EntityManager manager;
 
 	public void salvar(Aluno aluno) {
-		System.out.println("Salvando " + aluno);
 		if (aluno.getId() == null)
 			manager.persist(aluno);
 		else
 			manager.merge(aluno);
-
 	}
 
 	public List<Aluno> getAlunos() {
@@ -31,14 +29,12 @@ public class ProdutoDao {
 	}
 
 	public Aluno getAlunoPorId(Aluno aluno) {
-		System.out.println("Buscando aluno Id: " + aluno.getId());
 		return manager.find(Aluno.class, aluno.getId());
 	}
 
 	public void remover(Aluno aluno) {
 		Aluno alunoPorId = getAlunoPorId(aluno);
 		manager.remove(alunoPorId);
-//		System.out.println("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
 //		manager.createQuery("UPDATE Aluno SET status=0 WHERE id=" + alunoPorId.getId());
 	}
 

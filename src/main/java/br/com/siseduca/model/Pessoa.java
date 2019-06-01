@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Pessoa {
 
@@ -16,9 +18,13 @@ public class Pessoa {
 	private String nome;
 	private String email;
 	private String cpf;
+	
+	@DateTimeFormat
 	private String dataNascimento;
 	private String endereco;
 	private String telefone;
+	
+	@DateTimeFormat
 	private Calendar dataCadastro = Calendar.getInstance();
 	private int status = 1;
 

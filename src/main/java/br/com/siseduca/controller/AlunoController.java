@@ -8,7 +8,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -25,6 +24,7 @@ public class AlunoController {
 	@RequestMapping(method = RequestMethod.GET)
 	@Cacheable(value = "alunoHome")
 	public ModelAndView index() {
+		System.out.println("Acessando a Home Aluno");
 		List<Aluno> alunos = dao.getAlunos();
 		ModelAndView view = new ModelAndView("aluno/lista");
 		view.addObject("alunos", alunos);
@@ -33,6 +33,7 @@ public class AlunoController {
 
 	@RequestMapping("/form")
 	public ModelAndView form() {
+		System.out.println("Acessando o formulário do Aluno");
 		ModelAndView view = new ModelAndView("aluno/form");
 		return view;
 	}
@@ -40,8 +41,11 @@ public class AlunoController {
 	@RequestMapping("/add")
 	@CacheEvict(value = "alunoHome", allEntries = true)
 	public ModelAndView salvar(Aluno aluno, RedirectAttributes redirectAttributes) {
-//		if (aluno.getNome() == null || aluno.getNome() == "")
-//			return new ModelAndView("redirect:/alunos/form");
+		if (aluno.getNome() == null || aluno.getNome() == "") {
+			System.out.println("Nome vazio");
+			redirectAttributes.addFlashAttribute("campoInvalido", "Informe um nome válido para o Aluno!");
+			return new ModelAndView("redirect:/alunos/form");
+		}
 
 		dao.salvar(aluno);
 		redirectAttributes.addFlashAttribute("sucesso", "Aluno cadastrado com sucesso!");
@@ -51,23 +55,19 @@ public class AlunoController {
 	@RequestMapping("/lista/{id}")
 	public ModelAndView visualiza(Aluno id) {
 		Aluno aluno = dao.getAlunoPorId(id);
-		System.out.println(aluno);
 		ModelAndView view = new ModelAndView("aluno/visualiza");
 		view.addObject("aluno", aluno);
+		System.out.println("Listando Aluno: " + aluno);
 		return view;
-	}
-
-	@RequestMapping("/{id}")
-	@ResponseBody
-	public Aluno visualizaJson(Aluno id) {
-		return dao.getAlunoPorId(id);
 	}
 
 	@RequestMapping("/delete/{id}")
-	public ModelAndView removeAluno(Aluno aluno) {
+	@CacheEvict(value = "alunoHome", allEntries = true)
+	public ModelAndView removeAluno(Aluno aluno, RedirectAttributes redirectAttributes) {
+		System.out.println("Removendo Aluno:" + aluno);
 		dao.remover(aluno);
-		ModelAndView view = new ModelAndView("aluno/sucesso");
-		return view;
+		redirectAttributes.addFlashAttribute("sucesso", "Aluno removido com sucesso!");
+		return new ModelAndView("redirect:/alunos");
 	}
 
 }
