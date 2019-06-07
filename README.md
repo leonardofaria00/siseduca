@@ -7,6 +7,7 @@ Se tem interesse em contribuir para este projeto, confira o guia de contribuiç�
 Primeiro passo para a instalação do projeto é baixar o repositório com o seguinte comando:
 
 $ sudo git clone -b develop https://github.com/leonardofaria00/siseduca.git
+Link do template: https://themequarry.com/theme/pike-admin-free-bootstrap-4-admin-template-ASRZBPWD
 
 # Rotas
 http://localhost:8080/siseduca/
