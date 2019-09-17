@@ -23,8 +23,8 @@ public class JPAConfiguration {
 
 		DriverManagerDataSource source = new DriverManagerDataSource();
 		source.setUsername("postgres");
-		source.setPassword("123456");
-		source.setUrl("jdbc:postgresql://localhost:5432/sgedu");
+		source.setPassword("lnx4frdm");
+		source.setUrl("jdbc:postgresql://localhost:5432/banco_unyleya");
 //		source.setUrl("jdbc:mysql://localhost:3306/sgedu");
 		source.setDriverClassName("org.postgresql.Driver");
 //		source.setDriverClassName("com.mysql.jdbc.Driver");

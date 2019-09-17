@@ -18,15 +18,17 @@ public class Pessoa {
 	private String nome;
 	private String email;
 	private String cpf;
-	
+
 	@DateTimeFormat
 	private String dataNascimento;
 	private String endereco;
 	private String telefone;
-	
+
 	@DateTimeFormat
 	private Calendar dataCadastro = Calendar.getInstance();
 	private int status = 1;
+
+	private int idade;
 
 	public Integer getId() {
 		return id;
@@ -98,6 +100,21 @@ public class Pessoa {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [id=" + id + ", nome=" + nome + ", email=" + email + ", cpf=" + cpf + ", dataNascimento="
+				+ dataNascimento + ", endereco=" + endereco + ", telefone=" + telefone + ", dataCadastro="
+				+ dataCadastro + ", status=" + status + ", idade=" + idade + "]";
 	}
 
 }

@@ -29,7 +29,7 @@ h2{
 	padding: 20px; 0px;
 }
 </style>
-<title>Gerenciamento Educacional!</title>
+<title>Desenvolvimento de Sistemas com Java - Unyleya!</title>
 </head>
 <body class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -41,10 +41,10 @@ h2{
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="${s:mvcUrl('AC#form').build()}">Cadastro de Alunos <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="${s:mvcUrl('PC#form').build()}">Cadastro de Pessoas <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="${s:mvcUrl('AC#index').build()}">Lista de Alunos <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="${s:mvcUrl('PC#index').build()}">Lista de Pessoas <span class="sr-only">(página atual)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
