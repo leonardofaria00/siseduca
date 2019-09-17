@@ -4,10 +4,10 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:pageTemplate titulo="Gerenciamento Educacional!">
+<tags:pageTemplate titulo="corpo">
 
 	<h2>Visualiza Pessoa!</h2>
-	<form action="/siseduca/pessoas/add" method="post">
+	<form action="${s:mvcUrl('PC#salvar').build()}" method="post">
 	  <div class="form-row">	
 		<div class="col">
 			<label for="forNome">Nome:</label>
@@ -31,7 +31,7 @@
 		</div>
 	  </div>	 	
 	  <br>
-		<button type="submit" class="btn btn-success">Salvar</button>
-		<a class="btn btn-secondary" href="${s:mvcUrl('PC#index').build()}">Voltar</a>		
+		<a class="btn btn-secondary" href="${s:mvcUrl('PC#index').build()}">Voltar</a>	
+		<button type="submit" class="btn btn-success">Salvar</button>			
 	</form>
 </tags:pageTemplate>

@@ -4,7 +4,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:pageTemplate titulo="Gerenciamento Educacional!">
+<tags:pageTemplate titulo="corpo">
 		
 	<h2>Lista de Pessoas</h2>
 	
